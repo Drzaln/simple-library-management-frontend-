@@ -7,11 +7,12 @@ export const userLogin = (data) => {
         type:"LOGIN_USER",
         payload: axios.post(Url + `user/login`, data, {
             headers:{
-                'authorization': 'ulalalalala',
+                'authorization': 'x-app',
                 'x-token': 'token',
                 'x-user': '1'
               }
         }).then(res => {
+            console.log(`haloooooo`, res)
             const token = res.data.token
             const id_user = res.data.id_user
             const nama_user = res.data.nama_user

@@ -26,6 +26,12 @@ export const registerUser = (data) => {
   console.log(`dicoba dicoba`, data[0])
   return{
     type: "REGISTER_USER",
-    payload: axios.post(Url + `user/register`, data[0])
+    payload: axios.post(Url + `user/register`, data[0], {
+      headers:{
+        'authorization': 'x-app',
+        'x-token': 'token',
+        'x-user': '1'
+      }
+    })
   }
 }
