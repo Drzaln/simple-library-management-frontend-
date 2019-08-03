@@ -5,6 +5,7 @@ import { patchPinjam } from '../Publics/redux/actions/pinjam'
 import { Link } from 'react-router-dom'
 import Pinjam from '../Component/modal/addBorrower'
 import swal from 'sweetalert'
+import Url from "../support/url";
 
 class Detail extends Component {
   state = {
@@ -124,12 +125,12 @@ class Detail extends Component {
         </nav>
         <div>
           <img
-            src={list ? list.gmb_buku : ''}
+            src={(list ? list.gmb_buku != null : '') ? (list ? list.gmb_buku : '') : (list ? Url + list.image : '')}
             style={{ height: 300, width: '100%', objectFit: 'cover' }}
             alt={list ? list.nama_buku : ''}
           />
           <img
-            src={list ? list.gmb_buku : ''}
+            src={(list ? list.gmb_buku != null : '') ? (list ? list.gmb_buku : '') : (list ? Url + list.image : '')}
             alt={list ? list.nama_buku : ''}
             style={{
               width: '10%',
