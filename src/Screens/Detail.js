@@ -125,12 +125,12 @@ class Detail extends Component {
         </nav>
         <div>
           <img
-            src={(list ? list.gmb_buku != null : '') ? (list ? list.gmb_buku : '') : (list ? Url + list.image : '')}
+            src={(list ? list.gmb_buku != 'undefined' : '') ? (list ? list.gmb_buku : '') : (list ? Url + list.image : '')}
             style={{ height: 300, width: '100%', objectFit: 'cover' }}
             alt={list ? list.nama_buku : ''}
           />
           <img
-            src={(list ? list.gmb_buku != null : '') ? (list ? list.gmb_buku : '') : (list ? Url + list.image : '')}
+            src={(list ? list.gmb_buku != 'undefined' : '') ? (list ? list.gmb_buku : '') : (list ? Url + list.image : '')}
             alt={list ? list.nama_buku : ''}
             style={{
               width: '10%',

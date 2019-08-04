@@ -43,9 +43,9 @@ class Buku extends Component {
           <div className="col-md-2 mb-2" key={index} >
             <div className="card text-white bg-info" style={{ width: '10rem', height: '100%' }}>
               <Link to={`/book/${entry.id_buku}`}>
-                <img src={entry.gmb_buku == null ? Url + entry.image : entry.gmb_buku} className="card-img-top cardHome" alt="..." />
+                <img src={entry.gmb_buku == 'undefined' ? Url + entry.image : entry.gmb_buku} className="card-img-top cardHome" alt="..." />
                 {console.log('ini gambar online',entry.gmb_buku)}
-                {console.log(`ini gambar offline`, Url + `images/` + entry.image)}
+                {console.log(`ini gambar offline`, Url + entry.image)}
               </Link>
               <div className="card-body">
                 <p className="card-text judul"><h6>{entry.nama_buku}</h6></p>
