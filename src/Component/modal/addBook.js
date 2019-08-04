@@ -48,15 +48,6 @@ class AddBook extends React.Component {
         default:
           id_kategori = 1
       }
-      // this.state.buku.push({
-      //     nama_buku: this.state.nama_buku,
-      //     penulis_buku: this.state.penulis_buku,
-      //     ringkasan: this.state.ringkasan,
-      //     image: this.state.image,
-      //     lokasi_buku: this.state.lokasi_buku,
-      //     gmb_buku: this.state.gmb_buku,
-      //     id_kategori,
-      // });
       const dataBook = new FormData()
       dataBook.append('image', this.state.image)
       dataBook.append('nama_buku', this.state.nama_buku)
