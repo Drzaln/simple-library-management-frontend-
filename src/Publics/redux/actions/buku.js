@@ -22,6 +22,14 @@ export const getBukuId = (id_buku) => {
   };
 };
 
+export const searchBook = (search) => {
+  console.log('Search: ' + search)
+  return {
+      type: 'SEARCH_BOOK',
+      payload: axios.get(Url + `book?search=${search}`)
+  }
+}
+
 export const postBuku = (data) => {
   return {
     type: "POST_BUKU",

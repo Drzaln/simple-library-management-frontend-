@@ -8,6 +8,7 @@ import Detail from './Screens/Detail'
 import Edit from '../src/Component/modal/editBook'
 import Pinjam from './Screens/Pinjam'
 import Register from './Screens/Register'
+import User from "./Screens/User";
 import { spring, AnimatedSwitch } from 'react-router-transition'
 
 function mapStyles (styles) {
@@ -57,6 +58,7 @@ function App () {
         </AnimatedSwitch>
         <Route exact path={'/book/edit/:id_buku'} component={Edit} />
         <Route exact path={'/list/'} component={Pinjam} />
+        <Route exact path={'/user/'} component={User}/>
       </div>
     </Provider>
   )

@@ -38,6 +38,19 @@ export default class Example extends React.Component {
             </Link>
             {localStorage.token != null ? <NavItem>Halo {localStorage.nama_user} !</NavItem> : ''}
             <Nav className='ml-auto' navbar>
+            <NavItem>
+                {localStorage.level == 'admin' ? (
+                  <Link to='/user'>
+                    <button
+                      type='button'
+                      className='btn btn-outline-primary btn-sm font-weight-bold'
+                      style={{marginRight: 8}}
+                    >
+                      User List
+                    </button>
+                  </Link>
+                ) : ''}
+              </NavItem>
               <NavItem>
                 {localStorage.token != null ? (
                   <Link to='/list'>

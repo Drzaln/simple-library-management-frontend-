@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import '../support/style/Register.css'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
 import { Button } from "reactstrap";
 import swal from 'sweetalert'
 import Navbar from '../Component/navbar/Nav'
@@ -40,7 +39,7 @@ class Register extends Component {
             <input
               type='number'
               name='id_user'
-              placeholder='ID...'
+              placeholder='User ID...'
               id='id_user'
               required
               autoFocus
