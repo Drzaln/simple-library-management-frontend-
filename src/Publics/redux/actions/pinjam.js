@@ -8,6 +8,13 @@ export const getPinjam = () => {
   };
 };
 
+export const getPinjamId = (wikwik) => {
+  return {
+    type: 'GET_PINJAM_ID',
+    payload: axios.get(Url + `wikwik/${wikwik}`)
+  }
+}
+
 export const postPinjam = (data) => {
   return {
     type: "POST_PINJAM",
